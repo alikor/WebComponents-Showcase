@@ -13,3 +13,19 @@ services:
       - "4000:4000"
     depends_on:
       - component-library
+
+  nextjs-consumer-app:
+    build:
+      context: ./nextjs-consumer-app
+    ports:
+      - "4001:4001"
+    depends_on:
+      - component-library
+
+  angularjs-consumer-app:
+    build:
+      context: ./angularjs-consumer-app
+    ports:
+      - "4002:4002"
+    depends_on:
+      - component-library

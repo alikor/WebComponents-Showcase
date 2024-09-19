@@ -1,0 +1,30 @@
+<!-- src/index.html -->
+<!DOCTYPE html>
+<html lang="en" ng-app="myApp">
+<head>
+  <meta charset="UTF-8">
+  <title>AngularJS Consumer App</title>
+  <!-- Import AngularJS -->
+  <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.7.9/angular.min.js"></script>
+
+  <!-- Import Web Components from the Component Library -->
+  <script type="module">
+    import 'http://localhost:3000/components/my-button.js';
+    import 'http://localhost:3000/components/my-modal.js';
+  </script>
+
+  <!-- Application Script -->
+  <script src="app.js"></script>
+</head>
+<body ng-controller="MainController as ctrl">
+  <h1>AngularJS Consumer Application</h1>
+
+  <!-- Use the custom Web Components -->
+  <my-button label="Open Modal" ng-click="ctrl.openModal()"></my-button>
+
+  <my-modal id="myModal">
+    <h2>This is a Modal Dialog</h2>
+    <p>Content inside the modal.</p>
+  </my-modal>
+</body>
+</html>
