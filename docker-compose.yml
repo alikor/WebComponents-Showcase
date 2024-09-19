@@ -1,0 +1,15 @@
+version: '3.8'
+services:
+  component-library:
+    build:
+      context: ./component-library
+    ports:
+      - "3000:3000"
+
+  consumer-app:
+    build:
+      context: ./consumer-app
+    ports:
+      - "4000:4000"
+    depends_on:
+      - component-library

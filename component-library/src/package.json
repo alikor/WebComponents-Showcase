@@ -1,0 +1,10 @@
+{
+    "name": "component-library",
+    "version": "1.0.0",
+    "description": "Component Library Application",
+    "main": "server.js",
+    "dependencies": {
+      "express": "^4.18.2"
+    }
+  }
+  

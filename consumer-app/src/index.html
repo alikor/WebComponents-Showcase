@@ -1,0 +1,31 @@
+<!-- src/index.html -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Consumer App</title>
+  <!-- Import Web Components from the Component Library -->
+  <script type="module">
+    import 'http://localhost:3000/components/my-button.js';
+    import 'http://localhost:3000/components/my-modal.js';
+
+    document.addEventListener('DOMContentLoaded', () => {
+      const openModalBtn = document.getElementById('open-modal-btn');
+      const myModal = document.querySelector('my-modal');
+
+      openModalBtn.addEventListener('click', () => {
+        myModal.show();
+      });
+    });
+  </script>
+</head>
+<body>
+  <h1>Consumer Application</h1>
+  <my-button id="open-modal-btn" label="Open Modal">open</my-button>
+
+  <my-modal>
+    <h2>This is a Modal Dialog</h2>
+    <p>Content inside the modal.</p>
+  </my-modal>
+</body>
+</html>
