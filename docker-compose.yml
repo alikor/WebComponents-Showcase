@@ -6,6 +6,12 @@ services:
     ports:
       - "3000:3000"
 
+  react-webcomponent:
+    build:
+      context: ./react-webcomponent
+    ports:
+      - "3001:3001"
+
   consumer-app:
     build:
       context: ./consumer-app
